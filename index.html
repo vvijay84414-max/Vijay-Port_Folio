@@ -1,0 +1,2215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+        content="Vijay — Graphic Designer & Video Editor portfolio.">
+
+  <title>Vijay — Graphic Designer & Video Editor</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================================
+       BASIC SETTINGS
+    ========================================================= */
+
+    :root {
+      --bg: #080909;
+      --panel: #101212;
+      --text: #f3f5f3;
+      --muted: #969c98;
+      --line: rgba(255,255,255,.10);
+      --accent: #d8ff3e;
+      --max: 1320px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Manrope, system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 48px));
+      margin: auto;
+    }
+
+    .mono {
+      font-family: "DM Mono", monospace;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .nav {
+      position: fixed;
+      z-index: 50;
+      top: 18px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      width: min(1120px, calc(100% - 32px));
+
+      padding: 12px 14px 12px 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      border: 1px solid var(--line);
+
+      background: rgba(8,9,9,.68);
+
+      backdrop-filter: blur(18px);
+
+      border-radius: 999px;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 24px;
+
+      font-size: 13px;
+
+      color: #c4c9c5;
+    }
+
+    .navlinks a:hover {
+      color: var(--accent);
+    }
+
+    .navcta {
+      padding: 9px 14px;
+
+      border-radius: 999px;
+
+      background: var(--accent);
+      color: #101200;
+
+      font-weight: 800;
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: grid;
+      align-items: end;
+
+      padding: 150px 0 70px;
+
+      background:
+        radial-gradient(
+          circle at 80% 25%,
+          rgba(216,255,62,.09),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 20% 60%,
+          rgba(255,255,255,.05),
+          transparent 28%
+        );
+    }
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns: 1.4fr .6fr;
+
+      gap: 60px;
+
+      align-items: end;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+
+      color: var(--accent);
+
+      letter-spacing: .18em;
+
+      text-transform: uppercase;
+
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(58px, 10vw, 145px);
+
+      line-height: .86;
+
+      letter-spacing: -.075em;
+
+      max-width: 1000px;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: #747a76;
+    }
+
+    .hero-side {
+      padding-bottom: 8px;
+    }
+
+    .hero-side p {
+      color: var(--muted);
+
+      font-size: 15px;
+
+      line-height: 1.8;
+
+      max-width: 390px;
+    }
+
+    .hero-buttons {
+      display: flex;
+
+      gap: 10px;
+
+      margin-top: 28px;
+
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px 18px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 999px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+
+      color: #101200;
+
+      border-color: var(--accent);
+    }
+
+    .scroll {
+      margin-top: 80px;
+
+      color: #686f6b;
+
+      font-size: 11px;
+
+      letter-spacing: .12em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       GENERAL SECTIONS
+    ========================================================= */
+
+    section {
+      padding: 120px 0;
+    }
+
+    .section-head {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      align-items: end;
+
+      margin-bottom: 38px;
+    }
+
+    .section-title {
+      font-size: clamp(34px, 5vw, 70px);
+
+      letter-spacing: -.06em;
+
+      line-height: .95;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+
+      font-size: 11px;
+
+      letter-spacing: .15em;
+
+      text-transform: uppercase;
+
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      max-width: 390px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       FILTER BUTTONS
+    ========================================================= */
+
+    .filters {
+      display: flex;
+
+      gap: 8px;
+
+      flex-wrap: wrap;
+
+      margin-bottom: 26px;
+    }
+
+    .filter {
+      cursor: pointer;
+
+      border: 1px solid var(--line);
+
+      background: transparent;
+
+      color: #aeb4b0;
+
+      border-radius: 999px;
+
+      padding: 9px 13px;
+
+      font: inherit;
+
+      font-size: 12px;
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: var(--accent);
+
+      border-color: var(--accent);
+
+      color: #101200;
+    }
+
+
+    /* =========================================================
+       PORTFOLIO GRID
+    ========================================================= */
+
+    .work-grid {
+      display: grid;
+
+      grid-template-columns: repeat(12, 1fr);
+
+      gap: 16px;
+    }
+
+    .project {
+      position: relative;
+
+      overflow: hidden;
+
+      border: 1px solid var(--line);
+
+      background: var(--panel);
+
+      border-radius: 3px;
+
+      cursor: pointer;
+
+      min-height: 300px;
+    }
+
+    .project:nth-child(1),
+    .project:nth-child(4) {
+      grid-column: span 7;
+    }
+
+    .project:nth-child(2),
+    .project:nth-child(3),
+    .project:nth-child(5),
+    .project:nth-child(6) {
+      grid-column: span 5;
+    }
+
+    .project:nth-child(n+7) {
+      grid-column: span 4;
+    }
+
+    .media {
+      width: 100%;
+
+      height: 100%;
+
+      min-height: 330px;
+
+      display: block;
+
+      object-fit: cover;
+
+      transition:
+        transform .6s cubic-bezier(.2,.8,.2,1);
+
+      background: #161919;
+    }
+
+    .project:hover .media {
+      transform: scale(1.025);
+    }
+
+
+    /* =========================================================
+       PROJECT INFORMATION
+    ========================================================= */
+
+    .project-info {
+      position: absolute;
+
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: end;
+
+      gap: 15px;
+
+      padding: 14px 15px;
+
+      border: 1px solid rgba(255,255,255,.12);
+
+      background: rgba(8,9,9,.68);
+
+      backdrop-filter: blur(12px);
+    }
+
+    .project-title {
+      font-weight: 800;
+
+      font-size: 14px;
+    }
+
+    .project-meta {
+      font-size: 10px;
+
+      color: #aeb4b0;
+
+      margin-top: 4px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .1em;
+    }
+
+    .project-tag {
+      font-size: 10px;
+
+      color: var(--accent);
+
+      white-space: nowrap;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about {
+      display: grid;
+
+      grid-template-columns: .8fr 1.2fr;
+
+      gap: 80px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .about-copy {
+      font-size: clamp(24px, 3.5vw, 48px);
+
+      line-height: 1.12;
+
+      letter-spacing: -.04em;
+    }
+
+    .about-copy span {
+      color: #666c68;
+    }
+
+    .details {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 30px;
+    }
+
+    .detail {
+      border-top: 1px solid var(--line);
+
+      padding-top: 16px;
+    }
+
+    .detail h3 {
+      font-size: 12px;
+
+      color: var(--accent);
+
+      text-transform: uppercase;
+
+      letter-spacing: .12em;
+
+      margin-bottom: 12px;
+    }
+
+    .detail p,
+    .detail li {
+      color: #a6aca8;
+
+      font-size: 14px;
+
+      line-height: 1.8;
+    }
+
+    .detail ul {
+      list-style: none;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact {
+      border-top: 1px solid var(--line);
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .contact-inner {
+      display: grid;
+
+      grid-template-columns: 1.1fr .9fr;
+
+      gap: 70px;
+    }
+
+    .contact h2 {
+      font-size: clamp(52px, 8vw, 110px);
+
+      line-height: .86;
+
+      letter-spacing: -.075em;
+    }
+
+    .contact h2 span {
+      color: var(--accent);
+    }
+
+    .contact-card {
+      border: 1px solid var(--line);
+
+      padding: 26px;
+
+      background: rgba(255,255,255,.025);
+    }
+
+    .contact-row {
+      padding: 17px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-row:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-label {
+      display: block;
+
+      color: #6f7671;
+
+      font: 11px "DM Mono", monospace;
+
+      text-transform: uppercase;
+
+      margin-bottom: 7px;
+    }
+
+    .contact-value {
+      font-size: 15px;
+
+      word-break: break-word;
+    }
+
+    .socials {
+      display: flex;
+
+      gap: 8px;
+
+      margin-top: 18px;
+
+      flex-wrap: wrap;
+    }
+
+    .social {
+      border: 1px solid var(--line);
+
+      border-radius: 999px;
+
+      padding: 10px 13px;
+
+      font-size: 12px;
+    }
+
+    .social:hover {
+      border-color: var(--accent);
+
+      color: var(--accent);
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 28px 0;
+
+      border-top: 1px solid var(--line);
+
+      color: #676e69;
+
+      font-size: 11px;
+
+      display: flex;
+
+      justify-content: space-between;
+    }
+
+
+    /* =========================================================
+       HALF-SCREEN HOVER PREVIEW
+    ========================================================= */
+
+    #hoverPreview {
+      position: fixed;
+
+      z-index: 100;
+
+      right: 18px;
+
+      top: 50%;
+
+      transform:
+        translateY(-50%)
+        scale(.96);
+
+      width: min(50vw, 760px);
+
+      height: min(72vh, 760px);
+
+      display: none;
+
+      opacity: 0;
+
+      pointer-events: none;
+
+      background: #050606;
+
+      border: 1px solid rgba(255,255,255,.18);
+
+      box-shadow:
+        0 30px 100px rgba(0,0,0,.65);
+
+      transition:
+        opacity .18s ease,
+        transform .22s ease;
+
+      overflow: hidden;
+    }
+
+    #hoverPreview.show {
+      display: block;
+
+      opacity: 1;
+
+      transform:
+        translateY(-50%)
+        scale(1);
+    }
+
+    #hoverPreview img,
+    #hoverPreview video {
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: contain;
+
+      background: #050606;
+    }
+
+    .preview-label {
+      position: absolute;
+
+      z-index: 2;
+
+      left: 12px;
+
+      top: 12px;
+
+      padding: 7px 9px;
+
+      background: rgba(0,0,0,.6);
+
+      border: 1px solid rgba(255,255,255,.14);
+
+      font: 10px "DM Mono", monospace;
+
+      color: var(--accent);
+
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       FULL SCREEN MODAL
+    ========================================================= */
+
+    .modal {
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(0,0,0,.84);
+
+      z-index: 90;
+
+      display: none;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 25px;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-box {
+      width: min(1100px,100%);
+
+      max-height: 90vh;
+
+      overflow: auto;
+
+      background: #0b0d0d;
+
+      border: 1px solid var(--line);
+
+      padding: 14px;
+    }
+
+    .modal-media {
+      width: 100%;
+
+      max-height: 72vh;
+
+      object-fit: contain;
+
+      background: #050606;
+    }
+
+    .modal-info {
+      padding: 18px 6px 6px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .close {
+      border: 1px solid var(--line);
+
+      background: transparent;
+
+      color: white;
+
+      border-radius: 999px;
+
+      padding: 8px 12px;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media(max-width:850px) {
+
+      .navlinks {
+        display: none;
+      }
+
+      .nav {
+        width: calc(100% - 20px);
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      .hero-grid,
+      .about,
+      .contact-inner {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+      .hero-side {
+        padding-top: 0;
+      }
+
+      .scroll {
+        margin-top: 50px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .section-desc {
+        margin-top: 18px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .project,
+      .project:nth-child(n) {
+        grid-column: span 1;
+
+        min-height: 250px;
+      }
+
+      .media {
+        min-height: 250px;
+      }
+
+      #hoverPreview {
+        display: none !important;
+      }
+
+      .details {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media(max-width:520px) {
+
+      .wrap {
+        width: min(
+          var(--max),
+          calc(100% - 28px)
+        );
+      }
+
+      h1 {
+        font-size: 58px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project,
+      .project:nth-child(n) {
+        grid-column: span 1;
+      }
+
+      .contact h2 {
+        font-size: 60px;
+      }
+
+      footer {
+        display: block;
+
+        line-height: 1.8;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <nav class="nav">
+
+    <a class="logo" href="#top">
+      V<span>/</span>J
+    </a>
+
+    <div class="navlinks">
+
+      <a href="#work">
+        Work
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+    <a class="navcta" href="#contact">
+      Let's talk ↗
+    </a>
+
+  </nav>
+
+
+
+  <!-- =======================================================
+       MAIN
+  ======================================================== -->
+
+  <main id="top">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero">
+
+      <div class="wrap hero-grid">
+
+        <div>
+
+          <div class="eyebrow mono">
+            Graphic Designer / Video Editor
+          </div>
+
+          <h1>
+            Ideas into
+            <em>visual</em>
+            impact.
+          </h1>
+
+        </div>
+
+
+        <div class="hero-side">
+
+          <p>
+            I'm Vijay — a graphic designer and video editor
+            focused on typography, product visuals,
+            advertising and motion-led storytelling.
+          </p>
+
+
+          <div class="hero-buttons">
+
+            <a
+              class="btn primary"
+              href="#work"
+            >
+              Explore work ↓
+            </a>
+
+
+            <a
+              class="btn"
+              href="mailto:vvijay84414@gmail.com"
+            >
+              Email me ↗
+            </a>
+
+          </div>
+
+
+          <div class="scroll mono">
+            Scroll to explore — 01 / 04
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WORK
+    ====================================================== -->
+
+    <section id="work">
+
+      <div class="wrap">
+
+
+        <div class="section-head">
+
+          <div>
+
+            <div class="section-kicker mono">
+              Selected work
+            </div>
+
+            <h2 class="section-title">
+              A mix of design
+              <br>
+              & motion.
+            </h2>
+
+          </div>
+
+
+          <p class="section-desc">
+
+            Hover over any project on desktop
+            to open a half-screen preview.
+
+            Video projects autoplay muted
+            while you hold the cursor over them.
+
+          </p>
+
+        </div>
+
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filters">
+
+          <button
+            class="filter active"
+            data-filter="all"
+          >
+            All
+          </button>
+
+          <button
+            class="filter"
+            data-filter="graphic"
+          >
+            Graphic Design
+          </button>
+
+          <button
+            class="filter"
+            data-filter="branding"
+          >
+            Branding
+          </button>
+
+          <button
+            class="filter"
+            data-filter="poster"
+          >
+            Poster
+          </button>
+
+          <button
+            class="filter"
+            data-filter="social"
+          >
+            Social Media
+          </button>
+
+          <button
+            class="filter"
+            data-filter="product"
+          >
+            Product Ad
+          </button>
+
+          <button
+            class="filter"
+            data-filter="motion"
+          >
+            Motion Graphics
+          </button>
+
+          <button
+            class="filter"
+            data-filter="video"
+          >
+            Video Editing
+          </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROJECT GRID
+        ================================================== -->
+
+        <div class="work-grid">
+
+
+          <!-- PROJECT 01 -->
+
+          <article
+            class="project"
+            data-category="product graphic"
+            data-title="iQOO 15 Product Campaign"
+            data-type="image"
+            data-src="assets/iqoo-15.jpg"
+          >
+
+            <img
+              class="media"
+              src="assets/iqoo-15.jpg"
+              alt="iQOO 15 product advertisement"
+            >
+
+            <div class="project-info">
+
+              <div>
+
+                <div class="project-title">
+                  iQOO 15 Product Campaign
+                </div>
+
+                <div class="project-meta">
+                  Product Advertisement · Graphic
+                </div>
+
+              </div>
+
+              <div class="project-tag">
+                01
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 02 -->
+
+          <article
+            class="project"
+            data-category="poster graphic"
+            data-title="McLaren Poster"
+            data-type="image"
+            data-src="assets/mclaren.jpg"
+          >
+
+            <img
+              class="media"
+              src="assets/mclaren.jpg"
+              alt="McLaren automotive poster"
+            >
+
+            <div class="project-info">
+
+              <div>
+
+                <div class="project-title">
+                  McLaren
+                </div>
+
+                <div class="project-meta">
+                  Poster · Automotive
+                </div>
+
+              </div>
+
+              <div class="project-tag">
+                02
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 03 -->
+
+          <article
+            class="project"
+            data-category="poster graphic"
+            data-title="Porsche 911 Poster"
+            data-type="image"
+            data-src="assets/porsche-911.jpg"
+          >
+
+            <img
+              class="media"
+              src="assets/porsche-911.jpg"
+              alt="Porsche 911 poster"
+            >
+
+            <div class="project-info">
+
+              <div>
+
+                <div class="project-title">
+                  Porsche 911
+                </div>
+
+                <div class="project-meta">
+                  Poster · Automotive
+                </div>
+
+              </div>
+
+              <div class="project-tag">
+                03
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 04 -->
+
+          <article
+            class="project"
+            data-category="social graphic"
+            data-title="Freelancing Skills Social Post"
+            data-type="image"
+            data-src="assets/post-2.jpg"
+          >
+
+            <img
+              class="media"
+              src="assets/post-2.jpg"
+              alt="Freelancing skills social media design"
+            >
+
+            <div class="project-info">
+
+              <div>
+
+                <div class="project-title">
+                  Freelancing Skills
+                </div>
+
+                <div class="project-meta">
+                  Social Media · Graphic
+                </div>
+
+              </div>
+
+              <div class="project-tag">
+                04
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 05 -->
+
+          <article
+            class="project"
+            data-category="motion video"
+            data-title="Motion Edit — Comp 1"
+            data-type="video"
+            data-src="assets/comp-1.mp4"
+            data-poster="assets/comp-1-poster.jpg"
+          >
+
+            <video
+              class="media"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/comp-1-poster.jpg"
+            >
+
+              <source
+                src="assets/comp-1.mp4"
+                type="video/mp4"
+              >
+
+            </video>
+
+
+            <div class="project-info">
+
+              <div>
+
+                <div class="project-title">
+                  Motion Edit — Comp 1
+                </div>
+
+                <div class="project-meta">
+                  Motion Graphics · Video
+                </div>
+
+              </div>
+
+              <div class="project-tag">
+                05
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 06 -->
+
+          <article
+            class="project"
+            data-category="motion video"
+            data-title="Motion Edit — Vertical"
+            data-type="video"
+            data-src="assets/motion-edit-1.mp4"
+            data-poster="assets/motion-edit-1-poster.jpg"
+          >
+
+            <video
+              class="media"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/motion-edit-1-poster.jpg"
+            >
+
+              <source
+                src="assets/motion-edit-1.mp4"
+                type="video/mp4"
+              >
+
+            </video>
+
+
+            <div class="project-info">
+
+              <div>
+
+                <div class="project-title">
+                  Motion Edit — Vertical
+                </div>
+
+                <div class="project-meta">
+                  Motion Graphics · Video
+                </div>
+
+              </div>
+
+              <div class="project-tag">
+                06
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 07 -->
+
+          <article
+            class="project"
+            data-category="video"
+            data-title="Music Video Edit"
+            data-type="video"
+            data-src="assets/unplugged-clip.mp4"
+            data-poster="assets/unplugged-poster.jpg"
+          >
+
+            <video
+              class="media"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/unplugged-poster.jpg"
+            >
+
+              <source
+                src="assets/unplugged-clip.mp4"
+                type="video/mp4"
+              >
+
+            </video>
+
+
+            <div class="project-info">
+
+              <div>
+
+                <div class="project-title">
+                  Music Video Edit
+                </div>
+
+                <div class="project-meta">
+                  Video Editing
+                </div>
+
+              </div>
+
+              <div class="project-tag">
+                07
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 08 -->
+
+          <article
+            class="project"
+            data-category="video motion"
+            data-title="Video Edit 56421"
+            data-type="video"
+            data-src="assets/video-56421.mp4"
+            data-poster="assets/video-56421-poster.jpg"
+          >
+
+            <video
+              class="media"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/video-56421-poster.jpg"
+            >
+
+              <source
+                src="assets/video-56421.mp4"
+                type="video/mp4"
+              >
+
+            </video>
+
+
+            <div class="project-info">
+
+              <div>
+
+                <div class="project-title">
+                  Video Edit 56421
+                </div>
+
+                <div class="project-meta">
+                  Video Editing · Motion
+                </div>
+
+              </div>
+
+              <div class="project-tag">
+                08
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section id="about">
+
+      <div class="wrap about">
+
+
+        <div>
+
+          <div class="section-kicker mono">
+            About
+          </div>
+
+          <div class="about-copy">
+
+            Designing with
+
+            <span>
+              type, timing and visual rhythm
+            </span>
+
+            to make ideas feel clear and memorable.
+
+          </div>
+
+        </div>
+
+
+
+        <div class="details">
+
+
+          <div class="detail">
+
+            <h3>
+              Profile
+            </h3>
+
+            <p>
+              I'm Vijay, a graphic designer and
+              video editor with around 1 year
+              of experience.
+
+              My strongest areas are typography
+              and video editing, with a growing
+              focus on motion design and visual
+              storytelling.
+            </p>
+
+          </div>
+
+
+
+          <div class="detail">
+
+            <h3>
+              Services
+            </h3>
+
+            <ul>
+
+              <li>
+                Graphic Design
+              </li>
+
+              <li>
+                Video Editing
+              </li>
+
+              <li>
+                Product Advertisements
+              </li>
+
+              <li>
+                Social Media Creatives
+              </li>
+
+              <li>
+                Posters & Typography
+              </li>
+
+              <li>
+                Motion Graphics
+              </li>
+
+            </ul>
+
+          </div>
+
+
+
+          <div class="detail">
+
+            <h3>
+              Software
+            </h3>
+
+            <p>
+
+              Adobe Photoshop
+              <br>
+
+              Adobe After Effects
+              <br>
+
+              Adobe Premiere Pro
+              <br>
+
+              CorelDRAW
+              <br>
+
+              Canva
+              <br>
+
+              DaVinci Resolve — currently learning
+
+            </p>
+
+          </div>
+
+
+
+          <div class="detail">
+
+            <h3>
+              Capabilities
+            </h3>
+
+            <p>
+
+              Typography · Editing · Composition
+              · Visual hierarchy · Product
+              presentation · Motion timing ·
+              Social-first design
+
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section
+      id="contact"
+      class="contact"
+    >
+
+      <div class="wrap contact-inner">
+
+
+        <div>
+
+          <div class="section-kicker mono">
+            Contact
+          </div>
+
+          <h2>
+
+            Have a project
+
+            <br>
+
+            in <span>mind?</span>
+
+          </h2>
+
+        </div>
+
+
+
+        <div class="contact-card">
+
+
+          <div class="contact-row">
+
+            <span class="contact-label">
+              Name
+            </span>
+
+            <div class="contact-value">
+              Vijay
+            </div>
+
+          </div>
+
+
+
+          <div class="contact-row">
+
+            <span class="contact-label">
+              Email
+            </span>
+
+            <a
+              class="contact-value"
+              href="mailto:vvijay84414@gmail.com"
+            >
+              vvijay84414@gmail.com
+            </a>
+
+          </div>
+
+
+
+          <div class="contact-row">
+
+            <span class="contact-label">
+              WhatsApp / Phone
+            </span>
+
+            <a
+              class="contact-value"
+              href="https://wa.me/918303279051"
+              target="_blank"
+              rel="noopener"
+            >
+              +91 8303279051
+            </a>
+
+          </div>
+
+
+
+          <div class="contact-row">
+
+            <span class="contact-label">
+              Location
+            </span>
+
+            <div class="contact-value">
+              Aliganj / Kapoorthala, Lucknow
+            </div>
+
+          </div>
+
+
+
+          <div class="socials">
+
+            <a
+              class="social"
+              href="https://www.instagram.com/vijay_05_5_2021/"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram ↗
+            </a>
+
+
+            <a
+              class="social"
+              href="mailto:vvijay84414@gmail.com"
+            >
+              Email ↗
+            </a>
+
+
+            <a
+              class="social"
+              href="https://wa.me/918303279051"
+              target="_blank"
+              rel="noopener"
+            >
+              WhatsApp ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer class="wrap">
+
+    <span>
+      © <span id="year"></span>
+      Vijay. All rights reserved.
+    </span>
+
+    <span class="mono">
+      GRAPHIC DESIGN × VIDEO EDITING
+    </span>
+
+  </footer>
+
+
+
+  <!-- =======================================================
+       HALF-SCREEN PREVIEW
+  ======================================================== -->
+
+  <div id="hoverPreview">
+
+    <div class="preview-label">
+      Live preview
+    </div>
+
+    <div id="previewContent"></div>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       FULL SCREEN PROJECT MODAL
+  ======================================================== -->
+
+  <div
+    class="modal"
+    id="modal"
+  >
+
+    <div class="modal-box">
+
+      <div id="modalContent"></div>
+
+      <div class="modal-info">
+
+        <div>
+
+          <strong id="modalTitle"></strong>
+
+          <div
+            id="modalMeta"
+            class="project-meta"
+          ></div>
+
+        </div>
+
+        <button
+          class="close"
+          id="closeModal"
+        >
+          Close ×
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /* =====================================================
+       HOVER PREVIEW
+    ====================================================== */
+
+    const preview =
+      document.getElementById("hoverPreview");
+
+    const previewContent =
+      document.getElementById("previewContent");
+
+    let hideTimer;
+
+
+
+    function showPreview(card) {
+
+      clearTimeout(hideTimer);
+
+      const type =
+        card.dataset.type;
+
+      const src =
+        card.dataset.src;
+
+
+      previewContent.innerHTML = "";
+
+
+      /* VIDEO PREVIEW */
+
+      if (type === "video") {
+
+        const video =
+          document.createElement("video");
+
+        video.src = src;
+
+        video.autoplay = true;
+
+        video.muted = true;
+
+        video.loop = true;
+
+        video.playsInline = true;
+
+        previewContent.appendChild(video);
+
+        video.play().catch(() => {});
+
+      }
+
+
+      /* IMAGE PREVIEW */
+
+      else {
+
+        const image =
+          document.createElement("img");
+
+        image.src = src;
+
+        image.alt =
+          card.dataset.title || "";
+
+        previewContent.appendChild(image);
+
+      }
+
+
+      preview.classList.add("show");
+
+    }
+
+
+
+    function hidePreview() {
+
+      hideTimer = setTimeout(() => {
+
+        preview.classList.remove("show");
+
+        previewContent.innerHTML = "";
+
+      }, 80);
+
+    }
+
+
+
+    /* =====================================================
+       PROJECT EVENTS
+    ====================================================== */
+
+    document
+      .querySelectorAll(".project")
+      .forEach(card => {
+
+
+        /* Mouse enters */
+
+        card.addEventListener(
+          "mouseenter",
+          () => {
+
+            showPreview(card);
+
+          }
+        );
+
+
+        /* Mouse leaves */
+
+        card.addEventListener(
+          "mouseleave",
+          hidePreview
+        );
+
+
+        /* Click project */
+
+        card.addEventListener(
+          "click",
+          () => {
+
+            const modal =
+              document.getElementById("modal");
+
+            const modalContent =
+              document.getElementById("modalContent");
+
+
+            modalContent.innerHTML = "";
+
+
+            /* VIDEO */
+
+            if (
+              card.dataset.type === "video"
+            ) {
+
+              const video =
+                document.createElement("video");
+
+              video.className =
+                "modal-media";
+
+              video.controls = true;
+
+              video.autoplay = true;
+
+              video.playsInline = true;
+
+              video.src =
+                card.dataset.src;
+
+              modalContent.appendChild(video);
+
+            }
+
+
+            /* IMAGE */
+
+            else {
+
+              const image =
+                document.createElement("img");
+
+              image.className =
+                "modal-media";
+
+              image.src =
+                card.dataset.src;
+
+              image.alt =
+                card.dataset.title || "";
+
+              modalContent.appendChild(image);
+
+            }
+
+
+            document.getElementById(
+              "modalTitle"
+            ).textContent =
+              card.dataset.title || "";
+
+
+            document.getElementById(
+              "modalMeta"
+            ).textContent =
+              card
+                .querySelector(".project-meta")
+                ?.textContent || "";
+
+
+            modal.classList.add("open");
+
+          }
+        );
+
+      });
+
+
+
+    /* =====================================================
+       CLOSE MODAL
+    ====================================================== */
+
+    document
+      .getElementById("closeModal")
+      .onclick = () => {
+
+        document
+          .getElementById("modal")
+          .classList.remove("open");
+
+      };
+
+
+
+    document
+      .getElementById("modal")
+      .addEventListener(
+        "click",
+        event => {
+
+          if (
+            event.target.id === "modal"
+          ) {
+
+            event.currentTarget
+              .classList.remove("open");
+
+          }
+
+        }
+      );
+
+
+
+    /* ESC KEY */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (event.key === "Escape") {
+
+          document
+            .getElementById("modal")
+            .classList.remove("open");
+
+        }
+
+      }
+    );
+
+
+
+    /* =====================================================
+       CATEGORY FILTERS
+    ====================================================== */
+
+    document
+      .querySelectorAll(".filter")
+      .forEach(button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+
+            /* Active button */
+
+            document
+              .querySelectorAll(".filter")
+              .forEach(
+                b => b.classList.remove("active")
+              );
+
+
+            button.classList.add("active");
+
+
+            const filter =
+              button.dataset.filter;
+
+
+            /* Show / hide projects */
+
+            document
+              .querySelectorAll(".project")
+              .forEach(card => {
+
+                const shouldShow =
+                  filter === "all" ||
+                  card.dataset.category
+                    .split(" ")
+                    .includes(filter);
+
+
+                card.style.display =
+                  shouldShow ? "" : "none";
+
+              });
+
+          }
+        );
+
+      });
+
+
+
+    /* =====================================================
+       CURRENT YEAR
+    ====================================================== */
+
+    document.getElementById("year")
+      .textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
